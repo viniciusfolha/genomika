@@ -17,7 +17,7 @@ class ListaGenes(ListView):
     model = PhenoDb
     # paginate_by = 100
     def get_context_data(self, **kwargs):
-		print '##########'
+		
 		doencas =  self.request.GET['disease']
 		doencas = doencas.split(",")
 		context = super(ListaGenes, self).get_context_data(**kwargs)
@@ -26,6 +26,6 @@ class ListaGenes(ListView):
 			doenca = doenca.strip()
 			genes.append({'doenca': doenca ,'genes' : PhenoDb.objects.all().filter(disease__iexact = doenca)})
 		context.update({'doencasT' : genes})
-		print 'teste'
+		
 		return context
 
