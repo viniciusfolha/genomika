@@ -1,0 +1,39 @@
+{% extends 'genes/base.html' %}
+{%block content%}
+		<div>
+
+		<h2>Resultado:</h2>
+		
+		
+
+				
+				{% for doencaG in doencasT %}
+					
+					{% ifequal 0 doencaG.genes.count %}
+						<h3>{{doencaG.doenca}}</h3>
+						Doença não encontrada. Tente outra vez.
+					{% else %}
+						<h3>{{doencaG.doenca}}</h3>
+
+						<b>Genes encontrados: </b>
+						{% for gene in doencaG.genes %}
+							{% ifequal gene doencaG.genes.last %}
+								{{gene.gene}} 
+							{% else %}
+								{{gene.gene}} ,
+							{% endifequal %}
+						{% endfor %}
+						<br>
+					{% endifequal %}
+					<br>
+				{% endfor %}
+				
+
+			
+
+		
+		
+		
+
+		</div>
+{%endblock%}

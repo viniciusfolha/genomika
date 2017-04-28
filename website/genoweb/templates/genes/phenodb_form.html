@@ -1,0 +1,8 @@
+{% extends 'genes/base.html' %}
+{%block content%}
+	Informe a doenca de interesse na caixa abaixo:
+	<form action="/genes" method="get">{% csrf_token %}
+	    {{ form.as_p }}
+	    <input type="submit" value="Submit" />
+	</form>
+{%endblock%}

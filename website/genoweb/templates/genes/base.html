@@ -1,0 +1,25 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Genes</title>
+</head>
+<body>
+    <div class="page-header">
+        <h2><a href="/">
+        <img src="https://di0da3x67ebhy.cloudfront.net/static/site/img/logo_m.png" alt="Genomika" style="width:150 px;height:50px;border:0;"><br>
+        
+        </a></h2>
+    </div>
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+            <hr align="center" size="1" color=DarkBlue >
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
