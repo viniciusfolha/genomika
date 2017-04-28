@@ -24,7 +24,7 @@ class ListaGenes(ListView):
 		genes = []
 		for doenca in doencas:
 			doenca = doenca.strip()
-			genes.append({'doenca': doenca ,'genes' : PhenoDb.objects.all().filter(disease = doenca)})
+			genes.append({'doenca': doenca ,'genes' : PhenoDb.objects.all().filter(disease__iexact = doenca)})
 		context.update({'doencasT' : genes})
 		print 'teste'
 		return context
