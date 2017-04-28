@@ -61,12 +61,7 @@ with open("input.txt") as file:
 	for line in file:
 		conj.append(line.rstrip()) 
 
-print conj
-'''conj = ['ATTAGACCTG',
-'CCTGCCGGAA',
-'AGACCTGCCG',
-'GCCGGAATAC']
-'''
+
 aux = ''
 count_err = 0
 while(len(conj)!= 1 and count_err < 10):
